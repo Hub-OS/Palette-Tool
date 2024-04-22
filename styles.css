@@ -1,0 +1,167 @@
+:root {
+  /*
+  --background-color: black;
+   --accent: orange;
+  --container-color: #333;
+  --text-color: white;
+  */
+
+  --gradient: linear-gradient(
+    to right,
+    red 0%,
+    yellow 25%,
+    lime 50%,
+    cyan 75%,
+    blue 100%
+  );
+
+  --background-color: #da9571;
+  --accent: #4b0908;
+  --container-color: #b96642;
+  --text-color: black;
+  --link-color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--link-color);
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background: var(--background-color);
+  color: var(--text-color);
+  font-family: sans-serif;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+canvas {
+  width: 100%;
+  background: var(--container-color);
+  image-rendering: pixelated;
+  user-select: none;
+}
+
+#error {
+  color: red;
+  margin-left: auto;
+}
+
+#toolbar {
+  background: var(--gradient);
+  border-bottom: 2px solid var(--accent);
+  padding: 4px;
+  display: flex;
+  gap: 4px;
+  justify-content: end;
+}
+
+#main {
+  display: flex;
+  flex: 1;
+}
+
+#main > * {
+  margin: 6px;
+}
+
+.stretch {
+  flex: 1;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+#main h2 {
+  margin: 0;
+  font-size: inherit;
+  flex: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+#palette-container {
+  overflow-x: scroll;
+  width: 0;
+  min-width: 100%;
+}
+
+#palette {
+  border: 0;
+  height: 32px;
+  width: calc(32 * 256px);
+}
+
+dialog {
+  min-width: 400px;
+  margin-top: auto;
+  background: var(--background-color);
+  color: var(--text-color);
+  padding: 8px 16px;
+  top: 0;
+  bottom: 0;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+#image-type-dialog > * {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.about-section-body {
+  padding-left: 16px;
+  margin: 16px 0;
+}
+
+.about-listing {
+  display: flex;
+  flex-direction: row;
+}
+
+.about-listing .links {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+dialog h2 {
+  margin-top: 0;
+  margin-bottom: -4px;
+  font-size: inherit;
+}
+
+dialog,
+#palette-container,
+canvas {
+  border: 2px solid var(--accent);
+}
+
+h2 {
+  color: var(--accent);
+  font-weight: bold;
+}

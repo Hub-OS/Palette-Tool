@@ -1,0 +1,23 @@
+{
+  "name": "palette-tool",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "UNLICENSE",
+  "scripts": {
+    "start": "parcel index.html --dist-dir _dev",
+    "clean": "rimraf dist",
+    "build": "npm run clean && npm run licenses && parcel build --public-url ./ index.html",
+    "deploy": "git subtree push --prefix dist origin gh-pages",
+    "licenses": "license-ripper -o _licenses.json --include-homepage"
+  },
+  "devDependencies": {
+    "@types/bin-pack": "^1.0.3",
+    "install": "^0.13.0",
+    "license-ripper": "^0.7.0",
+    "npm": "^10.2.5",
+    "parcel": "^2.10.3",
+    "rimraf": "^5.0.5"
+  },
+  "dependencies": {}
+}

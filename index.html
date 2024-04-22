@@ -1,0 +1,75 @@
+<head>
+  <title>Palette Tool</title>
+  <link href="styles.css" rel="stylesheet" />
+  <script type="module" src="src/index.ts" defer></script>
+  <script type="module" src="src/about.ts" defer></script>
+</head>
+
+<body>
+  <div id="toolbar">
+    <button id="about-button">About</button>
+  </div>
+
+  <div id="main" class="column">
+    <div class="column">
+      <h2>
+        <div>Palette:</div>
+        <div id="error"></div>
+      </h2>
+      <div id="palette-container">
+        <canvas width="256" height="1" id="palette" tabindex="0"></canvas>
+      </div>
+    </div>
+
+    <div class="row stretch">
+      <div class="column stretch">
+        <h2>Full Color:</h2>
+
+        <canvas width="1" height="1" canvas id="color"></canvas>
+      </div>
+
+      <div class="column stretch">
+        <h2>Grayscale:</h2>
+        <canvas width="1" height="1" id="grayscale"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <dialog id="image-type-dialog">
+    <div>
+      <h2>Load as:</h2>
+
+      <div>
+        <button id="set-color">Color</button>
+        <button id="set-grayscale">Grayscale</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="about-dialog">
+    <div>
+      <h2 class="about-listing">
+        <u>Palette Tool</u>
+        <div class="links">
+          <a href="https://github.com/Hub-OS/Palette-Tool/">GitHub</a>
+        </div>
+      </h2>
+
+      <div class="about-section-body">
+        <p>A utility for creating and manipulating 256x1 palette files.</p>
+      </div>
+
+      <h2><u>Usage:</u></h2>
+
+      <div class="about-section-body">
+        <p>Load images by dropping them on the page.</p>
+
+        <div class="about-listing">
+          Drag colors in the palette to reorder them.
+        </div>
+      </div>
+
+      <h2><u>Third Party Licenses:</u></h2>
+    </div>
+  </dialog>
+</body>
